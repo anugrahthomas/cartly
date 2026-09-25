@@ -18,6 +18,3 @@ model images {
   userId ObjectId
   users User @relation(fields: [userId], references: [id])
 }
-
-
-

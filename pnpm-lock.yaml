@@ -166,25 +166,6 @@ importers:
         specifier: ^5.2.1
         version: 5.2.6(webpack-cli@7.2.3)(webpack@5.111.1)
 
-  aa:
-    dependencies:
-      '@prisma/orm-mongo':
-        specifier: 8.0.0-rc.12
-        version: 8.0.0-rc.12(@aws-sdk/credential-providers@3.1140.0)(@prisma/cli-engine@0.6.1(@prisma/management-api-sdk@1.78.0)(magicast@0.5.5))(magicast@0.5.5)(typanion@3.14.0)(typescript@6.0.3)(vite@8.3.1(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(less@4.8.1)(sass-embedded@1.105.0)(sass@1.105.0)(terser@5.51.2)(yaml@2.9.0))
-      dotenv:
-        specifier: ^18.0.3
-        version: 18.0.3
-    devDependencies:
-      '@prisma/cli-engine':
-        specifier: 0.6.1
-        version: 0.6.1(@prisma/management-api-sdk@1.78.0)(magicast@0.5.5)
-      '@types/node':
-        specifier: ^22.20.4
-        version: 22.20.4
-      prisma:
-        specifier: 8.0.0-rc.17
-        version: 8.0.0-rc.17(@types/node@22.20.4)(@vercel/nft@1.11.0)(magicast@0.5.5)(typanion@3.14.0)(typescript@6.0.3)(vite@8.3.1(@types/node@22.20.4)(esbuild@0.28.2)(jiti@2.7.0)(less@4.8.1)(sass-embedded@1.105.0)(sass@1.105.0)(terser@5.51.2)(yaml@2.9.0))(vitest@4.1.11)(ws@8.21.3)
-
   apps/api-gateway:
     dependencies:
       express:
