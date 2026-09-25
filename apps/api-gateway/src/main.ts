@@ -9,6 +9,7 @@ import swaggerUi from 'swagger-ui-express';
 import axios from 'axios';
 import cookieParser from 'cookie-parser';
 import { rateLimiter } from './middlewares/rate-limiter';
+import { errorHandlerMiddleware } from '../../../packages/error-handler/error.middleware';
 
 const app: Express = express();
 const port = Number(process.env.PORT) || 8000;
@@ -36,7 +37,6 @@ app.set('trust proxy', 1);
 // rate limiter
 app.use(rateLimiter);
 
-
 // routes
 app.get('/health', (req: Request, res: Response) => {
   res.json({ message: 'Welcome to api-gateway!' });
@@ -44,6 +44,9 @@ app.get('/health', (req: Request, res: Response) => {
 
 // proxy routes
 app.use('/v1/auth', proxy(authService));
+
+// global error handler
+app.use(errorHandlerMiddleware);
 
 const server = app.listen(port, () => {
   console.log(`Listening on port ${port}`);

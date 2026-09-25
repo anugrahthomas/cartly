@@ -12,5 +12,13 @@
     {
       "path": "./apps/api-gateway"
     }
-  ]
+  ],
+  "compilerOptions": {
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "types": [
+      "node"
+    ]
+  }
 }
