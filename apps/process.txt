@@ -1,0 +1,25 @@
+NX Monorepo Setup:
+-- create workspace:
+npm: npx create-nx-workspace@latest
+pnpm: pnpm dlx create-nx-workspace@latest
+
+-- add express plugin:
+npm: npx nx add @nx/express
+pnpm: pnpm dlx nx add @nx/express
+
+-- add apps:
+npm: npx nx g @nrwl/node:app api-gateway
+pnpm: pnpm dlx nx g @nrwl/node:app api-gateway
+
+-- add apps with custom options:
+npm: npx nx g @nrwl/node:app auth-service --directory=apps --e2eTestRunner=none --unitTestRunner=none --linter=eslint --tags=auth,service
+pnpm: pnpm dlx nx g @nrwl/node:app auth-service --directory=apps --e2eTestRunner=none --unitTestRunner=none --linter=eslint --tags=auth,service
+
+
+
+Libraries using:
+- morgan: for http logs
+- winston: for application logs
+- helmet: for security headers
+- cors: for cross-origin resource sharing
+- rate-limiter-flexible: for rate limiting
