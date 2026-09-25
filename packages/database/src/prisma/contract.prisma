@@ -1,0 +1,23 @@
+// use prisma-8
+
+model User {
+  id        ObjectId @id @map("_id")
+  name      String?
+  email     String   @unique
+  password  String
+  avatar    images[]
+  createdAt DateTime
+  updatedAt DateTime
+  @@map("users")
+}
+
+model images {
+  id ObjectId @id @map("_id")
+  file_id String
+  url String
+  userId ObjectId
+  users User @relation(fields: [userId], references: [id])
+}
+
+
+
