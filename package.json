@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "pnpm dlx nx run-many --target=serve --all",
-    "contract:emit": "prisma contract emit"
+    "contract:emit": "prisma contract emit",
+    "postinstall": "prisma skills sync || exit 0"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +21,7 @@
     "express-http-proxy": "^2.1.2",
     "helmet": "^8.3.0",
     "ioredis": "^6.0.0",
+    "mongodb": "^7.6.0",
     "morgan": "^1.12.1",
     "rate-limiter-flexible": "^11.2.1",
     "swagger-ui-express": "^5.0.1"
